@@ -1,0 +1,143 @@
+:root{
+    --bg: rgb(58, 65, 79);
+    --dimFill: rgba(255, 255, 255, 0.322);
+    --smallImg: 5rem;
+    --smallBuffer: 1rem;
+    --medBuffer: 2rem;
+    --largeBuffer: 4rem;
+    --headerText: white;
+    --paragraphText: white;
+    --thickBorder: solid 15px rgba(180, 228, 255, 0.164);
+    --thinBorder: solid 8px rgba(180, 228, 255, 0.186);
+    --brsmall: 1rem;
+    --tsn: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    --test: red;
+}
+@font-face {
+    font-family: 'staatliches';
+    src: url('../fonts/staatliches-regular-webfont.woff2') format('woff2'),
+         url('../fonts/staatliches-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'oswald';
+    src: url('../fonts/oswald-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Inika';
+    src: url('../fonts/inika-regular-webfont.woff2') format('woff2'),
+        url('../fonts/inika-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/poppins-medium-webfont.woff2') format('woff2'),
+        url('../fonts/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/inter-variablefont_slntwght-webfont.woff2') format('woff2'),
+        url('../fonts/inter-variablefont_slntwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    background-color: var(--bg);
+}
+body{
+    border-top: var(--thickBorder);
+    border-left: var(--thickBorder);
+    border-radius: var(--brsmall);
+    margin: 2rem;
+    height: 87vh;
+}
+header{
+    border-bottom: var(--thinBorder);
+    margin-left: var(--medBuffer) ;
+    margin-right: var(--medBuffer) ;
+    padding-top: .75rem;
+    padding-bottom: 1.5rem;
+}
+a{
+    color: var(--paragraphText)
+}
+img{
+    width: 100%;
+}
+
+
+
+.header_icon{
+    width: var(--smallImg);
+    height: var(--smallImg);
+    padding: var(--smallBuffer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: opacity(40%);
+    transition: var(--tsn);
+}
+.header_iconCaption{
+    filter: opacity(0%);
+    position: absolute;
+    top: 4.7rem;
+    transition: var(--tsn);
+}
+.header_icon:hover{
+    filter: opacity(100%);
+    transition: var(--tsn);
+}
+
+.header_icon:hover .header_iconCaption{
+    filter: opacity(100%);
+    top: 5.2rem;
+}
+
+.header_buttonBox{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header_buttonsRight{
+    display: flex;
+}
+
+.index_main{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: var(--largeBuffer);
+    width: 100%;
+}
+.main_boxLeft{
+    color: var(--headerText);
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+}
+.main_boxRight{
+    display: flex;
+}
+
+
+
+
+.footer_links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 20rem;
+    margin: 0 auto;
+}
